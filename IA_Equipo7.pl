@@ -183,3 +183,22 @@ similar(X, Y, Z) :- (X < Y + Z,!); X > Y - Z.
 
 recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nutricion(F2,CH2,P2,C2),_,_), A2 < A1, 
 	similar(F1, F2, 5), similar(CH1, CH2, 5), similar(P1, P2, 5), similar(C1, C2, 15).  
+
+res(Alimento) :-
+	new(D, dialog('Sistema experto - menu')),
+	comida(Alinento, Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
+	new(TextoAgua, text(Agua)),
+	new(TextoGrasa, text(Grasa)),
+	new(TextoCarbohidratos, text(Carbohidratos)),
+	new(TextoProteina, text(Proteina)),
+	new(TextoCalorias, text(Calorias)),
+	new(TextoTProducion, text(TProducion)),
+	new(TextoTVida, text(TVida)),
+	send(D, append(TextoAgua)),
+	send(D, append(TextoGrasa)),
+	send(D, append(TextoCarbohidratos)),
+	send(D, append(TextoProteina)),
+	send(D, append(TextoCalorias)),
+	send(D, append(TextoTProducion)),
+	send(D, append(TextoTVida)),
+	send(D, open_centered).
