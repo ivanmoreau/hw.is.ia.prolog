@@ -154,4 +154,12 @@ bebidas :-
 	send(BTS, append, BotonCerveza),
 	send(D, open_centered).
 
-:- inicio.
+% :- inicio.
+
+comida('Carne de res', 15415, nutricion(6.36, 0, 27.7, 168), '2.2 anios', '4-12 meses congelado').
+comida('Carne de pollo', 4325, nutricion(3.24, 0, 32.1, 158), '49 dias', '12 meses congelado').
+
+similar(X, Y, Z) :- (X < Y + Z,!); X > Y - Z.
+
+recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nutricion(F2,CH2,P2,C2),_,_), A2 < A1, 
+	similar(F1, F2, 5), similar(CH1, CH2, 5), similar(P1, P2, 5), similar(C1, C2, 15).  
