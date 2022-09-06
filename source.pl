@@ -3,6 +3,9 @@
 
 % Metodo para llamar a una imagen con un nombre especifico
 resource(portada, image, image('portada.jpg')).
+{% for res in ['res', 'pollo', 'cerdo', 'arroz', 'pan', 'pasta', 'col', 'papa', 'jitomate', 'manzana', 'platano', 'aceituna', 'vino', 'leche', 'cerveza'] %}
+resource({{ res }}, image, image('{{ res }}.jpg')).
+{% endfor %}
 
 % Ventana principal para la portada
 inicio :- 
@@ -125,6 +128,7 @@ showRecButton(D, B2, [H|T]) :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, {{ foodstr }}),
 	send(D, open_centered).
 {%- endmacro %}
 
@@ -182,5 +186,6 @@ recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
 {{ foodinfo('vino', 'Vino') }}
 {{ foodinfo('leche', 'Leche') }}
 {{ foodinfo('cerveza', 'Cerveza') }}
+
 
 :- initialization(inicio).

@@ -4,6 +4,37 @@
 % Metodo para llamar a una imagen con un nombre especifico
 resource(portada, image, image('portada.jpg')).
 
+resource(res, image, image('res.jpg')).
+
+resource(pollo, image, image('pollo.jpg')).
+
+resource(cerdo, image, image('cerdo.jpg')).
+
+resource(arroz, image, image('arroz.jpg')).
+
+resource(pan, image, image('pan.jpg')).
+
+resource(pasta, image, image('pasta.jpg')).
+
+resource(col, image, image('col.jpg')).
+
+resource(papa, image, image('papa.jpg')).
+
+resource(jitomate, image, image('jitomate.jpg')).
+
+resource(manzana, image, image('manzana.jpg')).
+
+resource(platano, image, image('platano.jpg')).
+
+resource(aceituna, image, image('aceituna.jpg')).
+
+resource(vino, image, image('vino.jpg')).
+
+resource(leche, image, image('leche.jpg')).
+
+resource(cerveza, image, image('cerveza.jpg')).
+
+
 % Ventana principal para la portada
 inicio :- 
 	new(@interfaz, dialog('Bienvenido al Sistema Experto')),
@@ -295,6 +326,7 @@ res :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Carne de res),
 	send(D, open_centered).
 pollo :-
 	new(D, dialog('Sistema experto - Carne de pollo')),
@@ -341,6 +373,7 @@ pollo :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Carne de pollo),
 	send(D, open_centered).
 cerdo :-
 	new(D, dialog('Sistema experto - Carne de puerco')),
@@ -387,6 +420,7 @@ cerdo :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Carne de puerco),
 	send(D, open_centered).
 arroz :-
 	new(D, dialog('Sistema experto - Arroz')),
@@ -433,6 +467,7 @@ arroz :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Arroz),
 	send(D, open_centered).
 pan :-
 	new(D, dialog('Sistema experto - Pan')),
@@ -479,6 +514,7 @@ pan :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Pan),
 	send(D, open_centered).
 pasta :-
 	new(D, dialog('Sistema experto - Pasta (seca)')),
@@ -525,6 +561,7 @@ pasta :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Pasta (seca)),
 	send(D, open_centered).
 col :-
 	new(D, dialog('Sistema experto - Col')),
@@ -571,6 +608,7 @@ col :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Col),
 	send(D, open_centered).
 papa :-
 	new(D, dialog('Sistema experto - Papa')),
@@ -617,6 +655,7 @@ papa :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Papa),
 	send(D, open_centered).
 jitomate :-
 	new(D, dialog('Sistema experto - Jitomate')),
@@ -663,6 +702,7 @@ jitomate :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Jitomate),
 	send(D, open_centered).
 manzana :-
 	new(D, dialog('Sistema experto - Manzana')),
@@ -709,6 +749,7 @@ manzana :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Manzana),
 	send(D, open_centered).
 platano :-
 	new(D, dialog('Sistema experto - Platano')),
@@ -755,6 +796,7 @@ platano :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Platano),
 	send(D, open_centered).
 aceituna :-
 	new(D, dialog('Sistema experto - Aceituna')),
@@ -801,6 +843,7 @@ aceituna :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Aceituna),
 	send(D, open_centered).
 vino :-
 	new(D, dialog('Sistema experto - Vino')),
@@ -847,6 +890,7 @@ vino :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Vino),
 	send(D, open_centered).
 leche :-
 	new(D, dialog('Sistema experto - Leche')),
@@ -893,6 +937,7 @@ leche :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Leche),
 	send(D, open_centered).
 cerveza :-
 	new(D, dialog('Sistema experto - Cerveza')),
@@ -939,6 +984,8 @@ cerveza :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
+  mostrar_imagen(D, Cerveza),
 	send(D, open_centered).
+
 
 :- initialization(inicio).
