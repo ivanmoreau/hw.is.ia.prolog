@@ -242,6 +242,7 @@ recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
 
 res :-
 	new(D, dialog('Sistema experto - Carne de res')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Carne de res')),
   new(TextoTitulo, text('Información sobre Carne de res')),
 	comida('Carne de res', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -260,7 +261,8 @@ res :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Carne de res')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -276,6 +278,7 @@ res :-
 	send(D, open_centered).
 pollo :-
 	new(D, dialog('Sistema experto - Carne de pollo')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Carne de pollo')),
   new(TextoTitulo, text('Información sobre Carne de pollo')),
 	comida('Carne de pollo', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -294,7 +297,8 @@ pollo :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Carne de pollo')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -310,6 +314,7 @@ pollo :-
 	send(D, open_centered).
 cerdo :-
 	new(D, dialog('Sistema experto - Carne de puerco')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Carne de puerco')),
   new(TextoTitulo, text('Información sobre Carne de puerco')),
 	comida('Carne de puerco', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -328,7 +333,8 @@ cerdo :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Carne de puerco')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -344,6 +350,7 @@ cerdo :-
 	send(D, open_centered).
 arroz :-
 	new(D, dialog('Sistema experto - Arroz')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Arroz')),
   new(TextoTitulo, text('Información sobre Arroz')),
 	comida('Arroz', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -362,7 +369,8 @@ arroz :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Arroz')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -378,6 +386,7 @@ arroz :-
 	send(D, open_centered).
 pan :-
 	new(D, dialog('Sistema experto - Pan')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Pan')),
   new(TextoTitulo, text('Información sobre Pan')),
 	comida('Pan', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -396,7 +405,8 @@ pan :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Pan')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -412,6 +422,7 @@ pan :-
 	send(D, open_centered).
 pasta :-
 	new(D, dialog('Sistema experto - Pasta (seca)')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Pasta (seca)')),
   new(TextoTitulo, text('Información sobre Pasta (seca)')),
 	comida('Pasta (seca)', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -430,7 +441,8 @@ pasta :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Pasta (seca)')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -446,6 +458,7 @@ pasta :-
 	send(D, open_centered).
 col :-
 	new(D, dialog('Sistema experto - Col')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Col')),
   new(TextoTitulo, text('Información sobre Col')),
 	comida('Col', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -464,7 +477,8 @@ col :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Col')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -480,6 +494,7 @@ col :-
 	send(D, open_centered).
 papa :-
 	new(D, dialog('Sistema experto - Papa')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Papa')),
   new(TextoTitulo, text('Información sobre Papa')),
 	comida('Papa', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -498,7 +513,8 @@ papa :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Papa')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -514,6 +530,7 @@ papa :-
 	send(D, open_centered).
 jitomate :-
 	new(D, dialog('Sistema experto - Jitomate')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Jitomate')),
   new(TextoTitulo, text('Información sobre Jitomate')),
 	comida('Jitomate', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -532,7 +549,8 @@ jitomate :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Jitomate')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -548,6 +566,7 @@ jitomate :-
 	send(D, open_centered).
 manzana :-
 	new(D, dialog('Sistema experto - Manzana')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Manzana')),
   new(TextoTitulo, text('Información sobre Manzana')),
 	comida('Manzana', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -566,7 +585,8 @@ manzana :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Manzana')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -582,6 +602,7 @@ manzana :-
 	send(D, open_centered).
 platano :-
 	new(D, dialog('Sistema experto - Platano')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Platano')),
   new(TextoTitulo, text('Información sobre Platano')),
 	comida('Platano', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -600,7 +621,8 @@ platano :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Platano')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -616,6 +638,7 @@ platano :-
 	send(D, open_centered).
 aceituna :-
 	new(D, dialog('Sistema experto - Aceituna')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Aceituna')),
   new(TextoTitulo, text('Información sobre Aceituna')),
 	comida('Aceituna', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -634,7 +657,8 @@ aceituna :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Aceituna')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -650,6 +674,7 @@ aceituna :-
 	send(D, open_centered).
 vino :-
 	new(D, dialog('Sistema experto - Vino')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Vino')),
   new(TextoTitulo, text('Información sobre Vino')),
 	comida('Vino', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -668,7 +693,8 @@ vino :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Vino')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -684,6 +710,7 @@ vino :-
 	send(D, open_centered).
 leche :-
 	new(D, dialog('Sistema experto - Leche')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Leche')),
   new(TextoTitulo, text('Información sobre Leche')),
 	comida('Leche', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -702,7 +729,8 @@ leche :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Leche')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -718,6 +746,7 @@ leche :-
 	send(D, open_centered).
 cerveza :-
 	new(D, dialog('Sistema experto - Cerveza')),
+  new(D2, dialog('Sistema experto - Recomendaciones para Cerveza')),
   new(TextoTitulo, text('Información sobre Cerveza')),
 	comida('Cerveza', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -736,7 +765,8 @@ cerveza :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para Cerveza')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),

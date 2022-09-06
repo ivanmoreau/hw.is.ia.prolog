@@ -72,6 +72,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 {% macro foodinfo(fooddef, foodstr) -%}
 {{ fooddef }} :-
 	new(D, dialog('Sistema experto - {{ foodstr }}')),
+  new(D2, dialog('Sistema experto - Recomendaciones para {{ foodstr }}')),
   new(TextoTitulo, text('Información sobre {{ foodstr }}')),
 	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
@@ -90,7 +91,8 @@ mostrar_imagen(Pantalla, Imagen) :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    new(D2, dialog('Sistema experto - Recomendaciones para {{ foodstr }}')))),
+    and(message(D2, open_centered),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
