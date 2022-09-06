@@ -69,12 +69,12 @@ mostrar_imagen(Pantalla, Imagen) :-
 	send(D, open_centered).
 {%- endmacro %}
 
-showRecButton(D, []).
-showRecButton(D, [H|T]) :-
+showRecButton(_, _, []).
+showRecButton(D, B2, [H|T]) :-
   comida(H, _, _, _, _, Metodo),
   new(Boton, button(H,
     and(message(@prolog, Metodo),
-    and(message(D, destroy), message(D, free))))),
+    and(message(B2, destroy), message(B2, free))))),
   send(D, append, Boton, below),
   showRecButton(D, T).
 
@@ -107,7 +107,7 @@ showRecButton(D, [H|T]) :-
     and(message(D, destroy), message(D, free))))),
   recomendaciones('{{ foodstr }}', List),
 	send(D2, append, new(BTS, dialog_group(buttons, group))),
-  showRecButton(BTS, List),
+  showRecButton(BTS, B2, List),
   new(BotonRegresarD2, button('Regresar',
     and(message(@prolog, {{ fooddef }}),
     and(message(D2, destroy), message(D2, free))))),
