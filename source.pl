@@ -83,7 +83,7 @@ showRecButton(D, B2, [H|T]) :-
 	new(D, dialog('Sistema experto - {{ foodstr }}')),
   new(D2, dialog('Sistema experto - Recomendaciones para {{ foodstr }}')),
   new(TextoTitulo, text('Información sobre {{ foodstr }}')),
-	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
+	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, _),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
   string_concat('Grasa: ', Grasa, GrasaStr),
