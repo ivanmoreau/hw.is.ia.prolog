@@ -274,6 +274,7 @@ res :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 pollo :-
@@ -310,6 +311,7 @@ pollo :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 cerdo :-
@@ -346,6 +348,7 @@ cerdo :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 arroz :-
@@ -382,6 +385,7 @@ arroz :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 pan :-
@@ -418,6 +422,7 @@ pan :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 pasta :-
@@ -454,6 +459,7 @@ pasta :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 col :-
@@ -490,6 +496,7 @@ col :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 papa :-
@@ -526,6 +533,7 @@ papa :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 jitomate :-
@@ -562,6 +570,7 @@ jitomate :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 manzana :-
@@ -598,6 +607,7 @@ manzana :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 platano :-
@@ -634,6 +644,7 @@ platano :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 aceituna :-
@@ -670,6 +681,7 @@ aceituna :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 vino :-
@@ -706,6 +718,7 @@ vino :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 leche :-
@@ -742,6 +755,7 @@ leche :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 cerveza :-
@@ -778,5 +792,6 @@ cerveza :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRecomendaciones)
   send(D, append, BotonRegresar),
 	send(D, open_centered).
