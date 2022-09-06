@@ -88,6 +88,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
 	send(D, append(TextoCarbohidratos)),
