@@ -70,12 +70,13 @@ main :-
 
 % Metodo para mostrar imagen
 mostrar_imagen(Pantalla, Imagen) :-
+	send(Pantalla, append, new(BTS, dialog_group(buttons, group))),
 	new(Figura, figure),
 	new(Bitmap, bitmap(resource(Imagen),@on)),
 	send(Bitmap, name, 1),
 	send(Figura, display, Bitmap),
 	send(Figura, status, 1),
-	send(Pantalla, display, Figura).
+	send(BTS, display, Figura).
 
 
 
