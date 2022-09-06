@@ -7,8 +7,7 @@ resource(portada, image, image('portada.jpg')).
 % Ventana principal para la portada
 inicio :- 
 	new(@interfaz, dialog('Bienvenido al Sistema Experto')),
-	send(@interfaz, size, size(630,400)),
-	% mostrar_imagen(@interfaz, portada), % Llama al metodo mostrar imagen
+	send(@interfaz, size, size(70º0,400)),
 	new(BotonComenzar, button('Iniciar programa', 
 		and(message(@prolog, main), 
 		and(message(@interfaz, destroy), message(@interfaz, free)) ))),
@@ -17,11 +16,12 @@ inicio :-
 	new(TextoAutores, text('Autores: Gustavo Iván Molina Rebolledo, Cesar Antonio Castro Sotelo, Alejandro Tonatiuh Garcia Espinoza')),
 	new(TextoDescripcion, text('Descripcion: Dada la situación actual de la escacez del agua, el presente sistema experto tiene como objetivo')),
 	new(TextoDescripcion2, text('proponer alimentos alternativos que requieran menor cantidad de agua para su producción.')),
-	send(@interfaz, append(BotonComenzar)),
-	send(@interfaz, append(BotonSalir)),
 	send(@interfaz, append(TextoAutores)),
 	send(@interfaz, append(TextoDescripcion)),
 	send(@interfaz, append(TextoDescripcion2)),
+	send(@interfaz, append(BotonComenzar)),
+	send(@interfaz, append(BotonSalir)),
+	mostrar_imagen(@interfaz, portada), % Llama al metodo mostrar imagen
 	send(@interfaz, display, BotonComenzar, point(150,100)),
 	send(@interfaz, display, BotonSalir, point(400,100)),
 	send(@interfaz, display, TextoAutores, point(50, 50)),
@@ -75,7 +75,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 	send(Bitmap, name, 1),
 	send(Figura, display, Bitmap),
 	send(Figura, status, 1),
-	send(Pantalla, display, Figura, point(10,30)).
+	send(Pantalla, display, Figura).
 
 
 
