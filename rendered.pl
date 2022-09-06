@@ -7,7 +7,7 @@ resource(portada, image, image('portada.jpg')).
 % Ventana principal para la portada
 inicio :- 
 	new(@interfaz, dialog('Bienvenido al Sistema Experto')),
-	send(@interfaz, size, size(70º0,400)),
+	send(@interfaz, size, size(700,400)),
 	new(BotonComenzar, button('Iniciar programa', 
 		and(message(@prolog, main), 
 		and(message(@interfaz, destroy), message(@interfaz, free)) ))),
