@@ -75,7 +75,7 @@ showRecButton(D, [H|T]) :-
   new(Boton, button(H,
     and(message(@prolog, Metodo),
     and(message(D, destroy), message(D, free))))),
-  send(D, append, Boton),
+  send(D, append, Boton, below),
   showRecButton(D, T).
 
 {% macro foodinfo(fooddef, foodstr) -%}
@@ -102,11 +102,16 @@ showRecButton(D, [H|T]) :-
   new(BotonRecomendaciones, button('Recomendaciones',
     and(message(D2, open_centered),
     and(message(D, destroy), message(D, free))))),
-  new(BotonRegresar, button('Regresar',
+  new(BotonRegresar, button('Menú',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
   recomendaciones('{{ foodstr }}', List),
-  showRecButton(D2, List),
+	send(D2, append, new(BTS, dialog_group(buttons, group))),
+  showRecButton(BTS, List),
+  new(BotonRegresarD2, button('Regresar',
+    and(message(@prolog, {{ fooddef }}),
+    and(message(D2, destroy), message(D2, free))))),
+  send(D2, append, BotonRegresarD2),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
