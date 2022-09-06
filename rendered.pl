@@ -22,11 +22,11 @@ inicio :-
 	send(@interfaz, append(BotonComenzar)),
 	send(@interfaz, append(BotonSalir)),
 	mostrar_imagen(@interfaz, portada), % Llama al metodo mostrar imagen
-	send(@interfaz, display, BotonComenzar, point(150,100)),
-	send(@interfaz, display, BotonSalir, point(400,100)),
-	send(@interfaz, display, TextoAutores, point(50, 50)),
-	send(@interfaz, display, TextoDescripcion, point(50, 65)),
-	send(@interfaz, display, TextoDescripcion2, point(50, 75)),
+	send(@interfaz, display, BotonComenzar),
+	send(@interfaz, display, BotonSalir),
+	send(@interfaz, display, TextoAutores),
+	send(@interfaz, display, TextoDescripcion),
+	send(@interfaz, display, TextoDescripcion2),
 	send(@interfaz, open_centered).
 
 
