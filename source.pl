@@ -88,6 +88,10 @@ mostrar_imagen(Pantalla, Imagen) :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  % button for recomendations
+  new(BotonRecomendaciones, button('Recomendaciones',
+    and(new(D2, dialog('Sistema experto - Recomendaciones para {{ foodstr }}')),
+    and(message(D, destroy), message(D, free))))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
