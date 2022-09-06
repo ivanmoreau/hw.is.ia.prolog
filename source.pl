@@ -69,6 +69,15 @@ mostrar_imagen(Pantalla, Imagen) :-
 	send(D, open_centered).
 {%- endmacro %}
 
+showRecButton(D, []).
+showRecButton(D, [H|T]) :-
+  comida(H, _, _, _, _, Metodo),
+  new(Boton, button(H,
+    and(message(@prolog, Metodo),
+    and(message(D, destroy), message(D, free))))),
+  send(D, append, Boton),
+  showRecButton(D, T).
+
 {% macro foodinfo(fooddef, foodstr) -%}
 {{ fooddef }} :-
 	new(D, dialog('Sistema experto - {{ foodstr }}')),
@@ -96,6 +105,8 @@ mostrar_imagen(Pantalla, Imagen) :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('{{ foodstr }}', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),

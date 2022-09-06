@@ -79,6 +79,15 @@ mostrar_imagen(Pantalla, Imagen) :-
 
 
 
+showRecButton(D, []).
+showRecButton(D, [H|T]) :-
+  comida(H, _, _, _, _, Metodo),
+  new(Boton, button(H,
+    and(message(@prolog, Metodo),
+    and(message(D, destroy), message(D, free))))),
+  send(D, append, Boton),
+  showRecButton(D, T).
+
 
 
 
@@ -266,6 +275,8 @@ res :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Carne de res', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -303,6 +314,8 @@ pollo :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Carne de pollo', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -340,6 +353,8 @@ cerdo :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Carne de puerco', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -377,6 +392,8 @@ arroz :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Arroz', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -414,6 +431,8 @@ pan :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Pan', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -451,6 +470,8 @@ pasta :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Pasta (seca)', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -488,6 +509,8 @@ col :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Col', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -525,6 +548,8 @@ papa :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Papa', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -562,6 +587,8 @@ jitomate :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Jitomate', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -599,6 +626,8 @@ manzana :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Manzana', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -636,6 +665,8 @@ platano :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Platano', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -673,6 +704,8 @@ aceituna :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Aceituna', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -710,6 +743,8 @@ vino :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Vino', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -747,6 +782,8 @@ leche :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Leche', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -784,6 +821,8 @@ cerveza :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
+  recomendaciones('Cerveza', List)
+  showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
