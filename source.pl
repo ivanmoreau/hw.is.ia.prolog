@@ -105,7 +105,7 @@ showRecButton(D, [H|T]) :-
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
-  recomendaciones('{{ foodstr }}', List)
+  recomendaciones('{{ foodstr }}', List),
   showRecButton(D2, List),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
