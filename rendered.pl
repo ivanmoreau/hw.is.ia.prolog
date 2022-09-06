@@ -7,8 +7,7 @@ resource(portada, image, image('portada.jpg')).
 % Ventana principal para la portada
 inicio :- 
 	new(@interfaz, dialog('Bienvenido al Sistema Experto')),
-	send(@interfaz, size, size(630,400)),
-	% mostrar_imagen(@interfaz, portada), % Llama al metodo mostrar imagen
+	send(@interfaz, size, size(700,400)),
 	new(BotonComenzar, button('Iniciar programa', 
 		and(message(@prolog, main), 
 		and(message(@interfaz, destroy), message(@interfaz, free)) ))),
@@ -17,16 +16,17 @@ inicio :-
 	new(TextoAutores, text('Autores: Gustavo Iván Molina Rebolledo, Cesar Antonio Castro Sotelo, Alejandro Tonatiuh Garcia Espinoza')),
 	new(TextoDescripcion, text('Descripcion: Dada la situación actual de la escacez del agua, el presente sistema experto tiene como objetivo')),
 	new(TextoDescripcion2, text('proponer alimentos alternativos que requieran menor cantidad de agua para su producción.')),
-	send(@interfaz, append(BotonComenzar)),
-	send(@interfaz, append(BotonSalir)),
 	send(@interfaz, append(TextoAutores)),
 	send(@interfaz, append(TextoDescripcion)),
 	send(@interfaz, append(TextoDescripcion2)),
-	send(@interfaz, display, BotonComenzar, point(150,100)),
-	send(@interfaz, display, BotonSalir, point(400,100)),
-	send(@interfaz, display, TextoAutores, point(50, 50)),
-	send(@interfaz, display, TextoDescripcion, point(50, 65)),
-	send(@interfaz, display, TextoDescripcion2, point(50, 75)),
+	send(@interfaz, append(BotonComenzar)),
+	send(@interfaz, append(BotonSalir)),
+	send(@interfaz, display, BotonComenzar),
+	send(@interfaz, display, BotonSalir),
+	send(@interfaz, display, TextoAutores),
+	send(@interfaz, display, TextoDescripcion),
+	send(@interfaz, display, TextoDescripcion2),
+	mostrar_imagen(@interfaz, portada), % Llama al metodo mostrar imagen
 	send(@interfaz, open_centered).
 
 
@@ -70,12 +70,13 @@ main :-
 
 % Metodo para mostrar imagen
 mostrar_imagen(Pantalla, Imagen) :-
+	send(Pantalla, append, new(BTS, dialog_group(buttons, group))),
 	new(Figura, figure),
 	new(Bitmap, bitmap(resource(Imagen),@on)),
 	send(Bitmap, name, 1),
 	send(Figura, display, Bitmap),
 	send(Figura, status, 1),
-	send(Pantalla, display, Figura, point(10,30)).
+	send(BTS, display, Figura).
 
 
 
