@@ -107,7 +107,7 @@ showRecButton(D, B2, [H|T]) :-
     and(message(D, destroy), message(D, free))))),
   recomendaciones('{{ foodstr }}', List),
 	send(D2, append, new(BTS, dialog_group(buttons, group))),
-  showRecButton(BTS, B2, List),
+  showRecButton(BTS, D2, List),
   new(BotonRegresarD2, button('Regresar',
     and(message(@prolog, {{ fooddef }}),
     and(message(D2, destroy), message(D2, free))))),
