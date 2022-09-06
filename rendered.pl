@@ -909,3 +909,5 @@ cerveza :-
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
 	send(D, open_centered).
+
+:- initialization(main).
