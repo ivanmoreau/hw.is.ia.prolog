@@ -88,6 +88,9 @@ mostrar_imagen(Pantalla, Imagen) :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -96,6 +99,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 {%- endmacro %}
 

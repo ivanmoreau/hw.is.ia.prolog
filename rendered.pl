@@ -255,6 +255,9 @@ res :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -263,6 +266,7 @@ res :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 pollo :-
 	new(D, dialog('Sistema experto - Carne de pollo')),
@@ -282,6 +286,9 @@ pollo :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -290,6 +297,7 @@ pollo :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 cerdo :-
 	new(D, dialog('Sistema experto - Carne de puerco')),
@@ -309,6 +317,9 @@ cerdo :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -317,6 +328,7 @@ cerdo :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 arroz :-
 	new(D, dialog('Sistema experto - Arroz')),
@@ -336,6 +348,9 @@ arroz :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -344,6 +359,7 @@ arroz :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 pan :-
 	new(D, dialog('Sistema experto - Pan')),
@@ -363,6 +379,9 @@ pan :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -371,6 +390,7 @@ pan :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 pasta :-
 	new(D, dialog('Sistema experto - Pasta (seca)')),
@@ -390,6 +410,9 @@ pasta :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -398,6 +421,7 @@ pasta :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 col :-
 	new(D, dialog('Sistema experto - Col')),
@@ -417,6 +441,9 @@ col :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -425,6 +452,7 @@ col :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 papa :-
 	new(D, dialog('Sistema experto - Papa')),
@@ -444,6 +472,9 @@ papa :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -452,6 +483,7 @@ papa :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 jitomate :-
 	new(D, dialog('Sistema experto - Jitomate')),
@@ -471,6 +503,9 @@ jitomate :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -479,6 +514,7 @@ jitomate :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 manzana :-
 	new(D, dialog('Sistema experto - Manzana')),
@@ -498,6 +534,9 @@ manzana :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -506,6 +545,7 @@ manzana :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 platano :-
 	new(D, dialog('Sistema experto - Platano')),
@@ -525,6 +565,9 @@ platano :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -533,6 +576,7 @@ platano :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 aceituna :-
 	new(D, dialog('Sistema experto - Aceituna')),
@@ -552,6 +596,9 @@ aceituna :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -560,6 +607,7 @@ aceituna :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 vino :-
 	new(D, dialog('Sistema experto - Vino')),
@@ -579,6 +627,9 @@ vino :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -587,6 +638,7 @@ vino :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 leche :-
 	new(D, dialog('Sistema experto - Leche')),
@@ -606,6 +658,9 @@ leche :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -614,6 +669,7 @@ leche :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
 cerveza :-
 	new(D, dialog('Sistema experto - Cerveza')),
@@ -633,6 +689,9 @@ cerveza :-
 	new(TextoTProducion, text(TProducionStr)),
   string_concat('Tiempo de vida: ', TVida, TVidaStr),
 	new(TextoTVida, text(TVidaStr)),
+  new(BotonRegresar, button('Regresar',
+    and(message(@prolog, main),
+    and(message(D, destroy), message(D, free))))),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
@@ -641,4 +700,5 @@ cerveza :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
+  send(D, append, BotonRegresar),
 	send(D, open_centered).
