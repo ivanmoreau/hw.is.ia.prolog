@@ -260,8 +260,7 @@ res :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Carne de res')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Carne de res')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -295,8 +294,7 @@ pollo :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Carne de pollo')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Carne de pollo')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -330,8 +328,7 @@ cerdo :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Carne de puerco')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Carne de puerco')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -365,8 +362,7 @@ arroz :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Arroz')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Arroz')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -400,8 +396,7 @@ pan :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Pan')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Pan')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -435,8 +430,7 @@ pasta :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Pasta (seca)')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Pasta (seca)')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -470,8 +464,7 @@ col :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Col')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Col')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -505,8 +498,7 @@ papa :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Papa')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Papa')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -540,8 +532,7 @@ jitomate :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Jitomate')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Jitomate')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -575,8 +566,7 @@ manzana :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Manzana')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Manzana')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -610,8 +600,7 @@ platano :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Platano')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Platano')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -645,8 +634,7 @@ aceituna :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Aceituna')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Aceituna')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -680,8 +668,7 @@ vino :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Vino')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Vino')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -715,8 +702,7 @@ leche :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Leche')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Leche')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
@@ -750,8 +736,7 @@ cerveza :-
 	new(TextoTVida, text(TVidaStr)),
   % button for recomendations
   new(BotonRecomendaciones, button('Recomendaciones',
-    and(new(D2, dialog('Sistema experto - Recomendaciones para Cerveza')),
-    and(message(D, destroy), message(D, free))))),
+    new(D2, dialog('Sistema experto - Recomendaciones para Cerveza')))),
   new(BotonRegresar, button('Regresar',
     and(message(@prolog, main),
     and(message(D, destroy), message(D, free))))),
