@@ -76,7 +76,7 @@ showRecButton(D, B2, [H|T]) :-
     and(message(@prolog, Metodo),
     and(message(B2, destroy), message(B2, free))))),
   send(D, append, Boton, below),
-  showRecButton(D, T).
+  showRecButton(D, B2, T).
 
 {% macro foodinfo(fooddef, foodstr) -%}
 {{ fooddef }} :-
