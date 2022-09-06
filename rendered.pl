@@ -136,8 +136,8 @@ verduras :-
 cereales :-
 	new(D, dialog('Sistema experto - Cereales')),
   
-	new(BotonMaiz, button('Maiz',
-		and(message(@prolog, maiz),
+	new(BotonArroz, button('Arroz',
+		and(message(@prolog, arroz),
 		and(message(D, destroy), message(D, free))))),
   
 	new(BotonPan, button('Pan',
@@ -150,7 +150,7 @@ cereales :-
   
 	send(D, append, new(BTS, dialog_group(buttons, group))),
   
-	send(BTS, append, BotonMaiz),
+	send(BTS, append, BotonArroz),
   
 	send(BTS, append, BotonPan),
   
@@ -236,6 +236,9 @@ similar(X, Y, Z) :- (X < Y + Z,!); X > Y - Z.
 
 recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nutricion(F2,CH2,P2,C2),_,_), A2 < A1, 
 	similar(F1, F2, 5), similar(CH1, CH2, 5), similar(P1, P2, 5), similar(C1, C2, 15).  
+
+% save all Y recomendaciones for X in a list
+recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
 
 res :-
 	new(D, dialog('Sistema experto - Carne de res')),

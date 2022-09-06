@@ -106,7 +106,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 
 {{ submenu('Carnes', ['Res', 'Pollo', 'Cerdo']) }}
 {{ submenu('Verduras', ['Col', 'Papa', 'Jitomate']) }}
-{{ submenu('Cereales', ['Maiz', 'Pan', 'Pasta']) }}
+{{ submenu('Cereales', ['Arroz', 'Pan', 'Pasta']) }}
 {{ submenu('Frutas', ['Manzana', 'Platano', 'Aceituna']) }}
 {{ submenu('Bebidas', ['Vino', 'Leche', 'Cerveza']) }}
 
@@ -138,6 +138,9 @@ similar(X, Y, Z) :- (X < Y + Z,!); X > Y - Z.
 
 recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nutricion(F2,CH2,P2,C2),_,_), A2 < A1, 
 	similar(F1, F2, 5), similar(CH1, CH2, 5), similar(P1, P2, 5), similar(C1, C2, 15).  
+
+% save all Y recomendaciones for X in a list
+recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
 
 {{ foodinfo('res', 'Carne de res') }}
 {{ foodinfo('pollo', 'Carne de pollo') }}
