@@ -240,7 +240,8 @@ recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nut
 res :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Carne de res', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -258,7 +259,8 @@ res :-
 pollo :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Carne de pollo', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -276,7 +278,8 @@ pollo :-
 cerdo :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Carne de puerco', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -294,7 +297,8 @@ cerdo :-
 arroz :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Arroz', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -312,7 +316,8 @@ arroz :-
 pan :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Pan', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -330,7 +335,8 @@ pan :-
 pasta :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Pasta (seca)', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -348,7 +354,8 @@ pasta :-
 col :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Col', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -366,7 +373,8 @@ col :-
 papa :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Papa', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -384,7 +392,8 @@ papa :-
 jitomate :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Jitomate', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -402,7 +411,8 @@ jitomate :-
 manzana :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Manzana', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -420,7 +430,8 @@ manzana :-
 platano :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Platano', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -438,7 +449,8 @@ platano :-
 aceituna :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Aceituna', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -456,7 +468,8 @@ aceituna :-
 vino :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Vino', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -474,7 +487,8 @@ vino :-
 leche :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Leche', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
@@ -492,7 +506,8 @@ leche :-
 cerveza :-
 	new(D, dialog('Sistema experto - menu')),
 	comida('Cerveza', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
-	new(TextoAgua, text(Agua)),
+  string_concat('Agua: ', Agua, AguaStr),
+	new(TextoAgua, text(AguaStr)),
 	new(TextoGrasa, text(Grasa)),
 	new(TextoCarbohidratos, text(Carbohidratos)),
 	new(TextoProteina, text(Proteina)),
