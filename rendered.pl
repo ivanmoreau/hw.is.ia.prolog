@@ -940,4 +940,4 @@ cerveza :-
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 
-:- initialization(main).
+:- initialization(inicio).

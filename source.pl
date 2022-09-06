@@ -182,4 +182,4 @@ recomendaciones(X, Y) :- findall(Z, recomendacion(X, Z), Y).
 {{ foodinfo('leche', 'Leche') }}
 {{ foodinfo('cerveza', 'Cerveza') }}
 
-:- initialization(main).
+:- initialization(inicio).
