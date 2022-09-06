@@ -73,7 +73,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 {{ fooddef }} :-
 	new(D, dialog('Sistema experto - {{ foodstr }}')),
   new(TextoTitulo, text('Información sobre {{ foodstr }}')),
-	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, metodo),
+	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida, Metodo),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
   string_concat('Grasa: ', Grasa, GrasaStr),
