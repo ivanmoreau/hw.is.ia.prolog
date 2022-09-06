@@ -104,7 +104,7 @@ mostrar_imagen(Pantalla, Imagen) :-
 	send(D, append(TextoCalorias)),
 	send(D, append(TextoTProducion)),
 	send(D, append(TextoTVida)),
-  send(D, append, BotonRecomendaciones)
+  send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
 	send(D, open_centered).
 {%- endmacro %}
