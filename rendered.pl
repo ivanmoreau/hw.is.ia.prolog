@@ -238,7 +238,8 @@ recomendacion(X, Y) :- comida(X,A1,nutricion(F1,CH1,P1,C1),_,_), comida(Y,A2,nut
 	similar(F1, F2, 5), similar(CH1, CH2, 5), similar(P1, P2, 5), similar(C1, C2, 15).  
 
 res :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Carne de res')),
+  new(TextoTitulo, text('Información sobre Carne de res')),
 	comida('Carne de res', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -263,7 +264,8 @@ res :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 pollo :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Carne de pollo')),
+  new(TextoTitulo, text('Información sobre Carne de pollo')),
 	comida('Carne de pollo', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -288,7 +290,8 @@ pollo :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 cerdo :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Carne de puerco')),
+  new(TextoTitulo, text('Información sobre Carne de puerco')),
 	comida('Carne de puerco', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -313,7 +316,8 @@ cerdo :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 arroz :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Arroz')),
+  new(TextoTitulo, text('Información sobre Arroz')),
 	comida('Arroz', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -338,7 +342,8 @@ arroz :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 pan :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Pan')),
+  new(TextoTitulo, text('Información sobre Pan')),
 	comida('Pan', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -363,7 +368,8 @@ pan :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 pasta :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Pasta (seca)')),
+  new(TextoTitulo, text('Información sobre Pasta (seca)')),
 	comida('Pasta (seca)', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -388,7 +394,8 @@ pasta :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 col :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Col')),
+  new(TextoTitulo, text('Información sobre Col')),
 	comida('Col', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -413,7 +420,8 @@ col :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 papa :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Papa')),
+  new(TextoTitulo, text('Información sobre Papa')),
 	comida('Papa', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -438,7 +446,8 @@ papa :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 jitomate :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Jitomate')),
+  new(TextoTitulo, text('Información sobre Jitomate')),
 	comida('Jitomate', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -463,7 +472,8 @@ jitomate :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 manzana :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Manzana')),
+  new(TextoTitulo, text('Información sobre Manzana')),
 	comida('Manzana', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -488,7 +498,8 @@ manzana :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 platano :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Platano')),
+  new(TextoTitulo, text('Información sobre Platano')),
 	comida('Platano', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -513,7 +524,8 @@ platano :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 aceituna :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Aceituna')),
+  new(TextoTitulo, text('Información sobre Aceituna')),
 	comida('Aceituna', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -538,7 +550,8 @@ aceituna :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 vino :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Vino')),
+  new(TextoTitulo, text('Información sobre Vino')),
 	comida('Vino', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -563,7 +576,8 @@ vino :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 leche :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Leche')),
+  new(TextoTitulo, text('Información sobre Leche')),
 	comida('Leche', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
@@ -588,7 +602,8 @@ leche :-
 	send(D, append(TextoTVida)),
 	send(D, open_centered).
 cerveza :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - Cerveza')),
+  new(TextoTitulo, text('Información sobre Cerveza')),
 	comida('Cerveza', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),

@@ -71,7 +71,8 @@ mostrar_imagen(Pantalla, Imagen) :-
 
 {% macro foodinfo(fooddef, foodstr) -%}
 {{ fooddef }} :-
-	new(D, dialog('Sistema experto - menu')),
+	new(D, dialog('Sistema experto - {{ foodstr }}')),
+  new(TextoTitulo, text('Información sobre {{ foodstr }}')),
 	comida('{{ foodstr }}', Agua, nutricion(Grasa, Carbohidratos, Proteina, Calorias), TProducion, TVida),
   string_concat('Agua: ', Agua, AguaStr),
 	new(TextoAgua, text(AguaStr)),
