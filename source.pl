@@ -120,6 +120,7 @@ showRecButton(D, B2, [H|T]) :-
     and(message(@prolog, {{ fooddef }}),
     and(message(D2, destroy), message(D2, free))))),
   send(D2, append, BotonRegresarD2),
+  mostrar_imagen(D2, menu),
   send(D, append, TextoTitulo),
 	send(D, append(TextoAgua)),
 	send(D, append(TextoGrasa)),
