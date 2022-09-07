@@ -3,7 +3,7 @@
 
 % Metodo para llamar a una imagen con un nombre especifico
 resource(portada, image, image('portada.jpg')).
-{% for res in ['res', 'pollo', 'cerdo', 'arroz', 'pan', 'pasta', 'col', 'papa', 'jitomate', 'manzana', 'platano', 'aceituna', 'vino', 'leche', 'cerveza'] %}
+{% for res in ['res', 'pollo', 'cerdo', 'arroz', 'pan', 'pasta', 'col', 'papa', 'jitomate', 'manzana', 'platano', 'aceituna', 'vino', 'leche', 'cerveza', 'menu', 'carnes', 'verduras', 'bebidas', 'frutas', 'cereales'] %}
 resource({{ res }}, image, image('{{ res }}.jpg')).
 {% endfor %}
 
@@ -45,6 +45,7 @@ main :-
   {% for tipo in ['Carnes', 'Cereales', 'Verduras', 'Frutas', 'Bebidas'] %}
 	send(BTS, append, Boton{{ tipo }}),
   {% endfor %}
+  mostrar_imagen(D, menu),
 	send(D, open_centered).
 
 % Metodo para mostrar imagen
@@ -70,6 +71,7 @@ mostrar_imagen(Pantalla, Imagen) :-
   {% for button in buttons %}
 	send(BTS, append, Boton{{ button }}),
   {% endfor %}
+  mostrar_imagen(D, {{ catstr.lower() }}),
 	send(D, open_centered).
 {%- endmacro %}
 

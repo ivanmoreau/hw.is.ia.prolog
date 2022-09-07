@@ -34,6 +34,18 @@ resource(leche, image, image('leche.jpg')).
 
 resource(cerveza, image, image('cerveza.jpg')).
 
+resource(menu, image, image('menu.jpg')).
+
+resource(carnes, image, image('carnes.jpg')).
+
+resource(verduras, image, image('verduras.jpg')).
+
+resource(bebidas, image, image('bebidas.jpg')).
+
+resource(frutas, image, image('frutas.jpg')).
+
+resource(cereales, image, image('cereales.jpg')).
+
 
 % Ventana principal para la portada
 inicio :- 
@@ -97,6 +109,7 @@ main :-
   
 	send(BTS, append, BotonBebidas),
   
+  mostrar_imagen(D, menu),
 	send(D, open_centered).
 
 % Metodo para mostrar imagen
@@ -147,6 +160,7 @@ carnes :-
   
 	send(BTS, append, BotonCerdo),
   
+  mostrar_imagen(D, carnes),
 	send(D, open_centered).
 % Menú de Verduras
 verduras :-
@@ -172,6 +186,7 @@ verduras :-
   
 	send(BTS, append, BotonJitomate),
   
+  mostrar_imagen(D, verduras),
 	send(D, open_centered).
 % Menú de Cereales
 cereales :-
@@ -197,6 +212,7 @@ cereales :-
   
 	send(BTS, append, BotonPasta),
   
+  mostrar_imagen(D, cereales),
 	send(D, open_centered).
 % Menú de Frutas
 frutas :-
@@ -222,6 +238,7 @@ frutas :-
   
 	send(BTS, append, BotonAceituna),
   
+  mostrar_imagen(D, frutas),
 	send(D, open_centered).
 % Menú de Bebidas
 bebidas :-
@@ -247,6 +264,7 @@ bebidas :-
   
 	send(BTS, append, BotonCerveza),
   
+  mostrar_imagen(D, bebidas),
 	send(D, open_centered).
 
 
