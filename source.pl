@@ -3,8 +3,8 @@
 
 % Metodo para llamar a una imagen con un nombre especifico
 resource(portada, image, image('portada.jpg')).
-{% for res in ['Res', 'Pollo', 'Cerdo', 'Arroz', 'Pan', 'Pasta', 'Col', 'Papa', 'Jitomate', 'Manzana', 'Platano', 'Aceituna', 'Vino', 'Leche', 'Cerveza'] %}
-resource({{ res }}, image, image('{{ res.lower() }}.jpg')).
+{% for res in ['res', 'pollo', 'cerdo', 'arroz', 'pan', 'pasta', 'col', 'papa', 'jitomate', 'manzana', 'platano', 'aceituna', 'vino', 'leche', 'cerveza'] %}
+resource({{ res }}, image, image('{{ res }}.jpg')).
 {% endfor %}
 
 % Ventana principal para la portada
@@ -128,7 +128,7 @@ showRecButton(D, B2, [H|T]) :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
-  mostrar_imagen(D, {{ foodstr[0].upper() }}{{ foodstr[1:] }}),
+  mostrar_imagen(D, {{ fooddef }}),
 	send(D, open_centered).
 {%- endmacro %}
 
