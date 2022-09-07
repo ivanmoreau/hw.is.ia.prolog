@@ -128,7 +128,7 @@ showRecButton(D, B2, [H|T]) :-
 	send(D, append(TextoTVida)),
   send(D, append, BotonRecomendaciones),
   send(D, append, BotonRegresar),
-  mostrar_imagen(D, {{ foodstr }}),
+  mostrar_imagen(D, {{ foodstr[0].upper() }}{{ foodstr[1:] }}),
 	send(D, open_centered).
 {%- endmacro %}
 
