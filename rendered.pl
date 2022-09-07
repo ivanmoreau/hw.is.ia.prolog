@@ -4,35 +4,35 @@
 % Metodo para llamar a una imagen con un nombre especifico
 resource(portada, image, image('portada.jpg')).
 
-resource(res, image, image('res.jpg')).
+resource(Res, image, image('res.jpg')).
 
-resource(pollo, image, image('pollo.jpg')).
+resource(Pollo, image, image('pollo.jpg')).
 
-resource(cerdo, image, image('cerdo.jpg')).
+resource(Cerdo, image, image('cerdo.jpg')).
 
-resource(arroz, image, image('arroz.jpg')).
+resource(Arroz, image, image('arroz.jpg')).
 
-resource(pan, image, image('pan.jpg')).
+resource(Pan, image, image('pan.jpg')).
 
-resource(pasta, image, image('pasta.jpg')).
+resource(Pasta, image, image('pasta.jpg')).
 
-resource(col, image, image('col.jpg')).
+resource(Col, image, image('col.jpg')).
 
-resource(papa, image, image('papa.jpg')).
+resource(Papa, image, image('papa.jpg')).
 
-resource(jitomate, image, image('jitomate.jpg')).
+resource(Jitomate, image, image('jitomate.jpg')).
 
-resource(manzana, image, image('manzana.jpg')).
+resource(Manzana, image, image('manzana.jpg')).
 
-resource(platano, image, image('platano.jpg')).
+resource(Platano, image, image('platano.jpg')).
 
-resource(aceituna, image, image('aceituna.jpg')).
+resource(Aceituna, image, image('aceituna.jpg')).
 
-resource(vino, image, image('vino.jpg')).
+resource(Vino, image, image('vino.jpg')).
 
-resource(leche, image, image('leche.jpg')).
+resource(Leche, image, image('leche.jpg')).
 
-resource(cerveza, image, image('cerveza.jpg')).
+resource(Cerveza, image, image('cerveza.jpg')).
 
 
 % Ventana principal para la portada
